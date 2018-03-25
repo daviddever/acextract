@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+screenshots () {
+	while true
+	do
+		x=$((x+1))
+		gnome-screenshot -w -B -f ~/Documents/ac94/page$x.png
+		xte "keydown Control_L" "key Page_Down" "keyup Control_L" "sleep 1"
+	done
+}
+
+xte "keydown Alt_L" "key Tab" "keyup Alt_L"
+
+screenshots
+

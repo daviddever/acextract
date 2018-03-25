@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for ((x=1;x<379;x++))
+do
+	convert -resize 500% ~/Documents/ac94/images/page$x.png -type Grayscale ~/Documents/ac94/images/page$x.tiff
+	tesseract ~/Documents/ac94/images/page$x.tiff ~/Documents/ac94/text$x
+done
+
+
